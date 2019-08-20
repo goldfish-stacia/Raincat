@@ -1,16 +1,18 @@
 //- 導覽列 選項
-//- mixmin nav(link,img,alt,page)
-//-     a(href=link)
-//-         img(src="imgs/"+img+".png", alt=alt)
-//-             h6=page
+mixmin nav(link,page,img,alt)
+    a(href=link)
+        h6=page
+        img(src="imgs/"+img+".png", alt=alt)
 
 <!DOCTYPE html>
 html(lang="zh")
     head
         meta(charset="UTF-8")
-        title Document
+        title 林雨潔中途之家
+        link(rel="stylesheet", href="style.css")
     body
         nav
             a(href="#")
                 h6 關於雨潔
                 img(src="imgs/icon1.png", alt="icon1")
+            +nav(about.html,愛心認養,icon2,icon2)
