@@ -1,5 +1,5 @@
 //- 導覽列 選項
-mixmin nav(link,page,img,alt)
+mixin nav(link, page, img, alt)
     a(href=link)
         h6=page
         img(src="imgs/"+img+".png", alt=alt)
@@ -12,7 +12,8 @@ html(lang="zh")
         link(rel="stylesheet", href="style.css")
     body
         nav
-            a(href="#")
-                h6 關於雨潔
-                img(src="imgs/icon1.png", alt="icon1")
-            +nav(about.html,愛心認養,icon2,icon2)
+            +nav("about.html","關於雨潔","icon1","icon1")
+            +nav("#","愛心認養","icon2","icon2")
+            +nav("#","幸福分享","icon3","icon3")
+            +nav("#","支持雨潔","icon4","icon4")
+            +nav("#","與我聯絡","icon5","icon5")

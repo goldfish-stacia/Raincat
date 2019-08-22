@@ -1,7 +1,20 @@
-body {
-    background-color: #000;
+html, body {
+    background: linear-gradient(to top, #ad5389, #3c1053);
 }
 * {
+    border: 0.1px solid rgba(246, 250, 4, 0.8);
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    color: #ffffff;
+}
+nav {
+    display: grid;
+    
+}
+nav h6 {
+    font-size: 20px;
+}
+nav img {
+    width: 50px;
 }
