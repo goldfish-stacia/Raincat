@@ -14,7 +14,9 @@ html, body {
     width: 165px;
 }
 nav {
-    width: 165px;
+    width: 100%;
+
+    /* margin: auto 0; */
 
     /* background-color: rgba(255, 255, 255, 0.5); */
     display: grid;
@@ -28,11 +30,10 @@ nav a {
     /* position: relative;
     left: -103px; */
 }
-nav :hover {
-    /* position: relative;
-    left: 0px; */
-
-}
+/* nav :hover {
+    position: relative;
+    left: 0px;
+} */
 nav h6 {
     display: inline;
     font-size: 18px;
