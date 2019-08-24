@@ -2,7 +2,7 @@
 mixin nav(link, page, img, alt)
     a(href=link)
         h6=page
-        img(src="imgs/"+img+".png", alt=alt)
+        img(src="imgs/"+img+".svg", alt=alt)
 
 <!DOCTYPE html>
 html(lang="zh")
@@ -11,9 +11,10 @@ html(lang="zh")
         title 林雨潔中途之家
         link(rel="stylesheet", href="style.css")
     body
-        nav
-            +nav("about.html","關於雨潔","icon1","icon1")
-            +nav("#","愛心認養","icon2","icon2")
-            +nav("#","幸福分享","icon3","icon3")
-            +nav("#","支持雨潔","icon4","icon4")
-            +nav("#","與我聯絡","icon5","icon5")
+        div(id="nav")
+            nav
+                +nav("about.html","關於雨潔","icon1","icon1")
+                +nav("#","愛心認養","icon2","icon2")
+                +nav("#","幸福分享","icon3","icon3")
+                +nav("#","支持雨潔","icon4","icon4")
+                +nav("#","與我聯絡","icon5","icon5")
