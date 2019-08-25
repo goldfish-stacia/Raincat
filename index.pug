@@ -1,24 +1,29 @@
-//- 導覽列 選項
-mixin nav(link, page, img, alt)
-    a(href=link)
-        img(src="imgs/"+img+".svg", alt=alt)
-        h6=page
-
 <!DOCTYPE html>
 html(lang="zh")
     head
-        meta(charset="UTF-8")
+        meta(charset="UTF-8")(name="viewport")(content="width=device-width, initial-scale=1.0, user-scalable=no")
+        
         title 林雨潔貓咪中途之家
         link(rel="stylesheet", href="style.css")
     body
+        //- 背景的框框
         div(class="logo")
-            a 林雨潔貓咪中途之家
-        div(class="box1")
+        div(class="boxr")
+            div(id="boxl1")
+        div(class="boxl")
+            div(id="boxl2")
+        //- 右側導覽列
         div(class="menu")
-            +nav("#","關於雨潔","icon1","icon1")
-            +nav("#","愛心認養","icon2","icon2")
-            +nav("#","幸福分享","icon3","icon3")
-            +nav("#","支持雨潔","icon4","icon4")
-            +nav("#","與我聯絡","icon5","icon5")
+            a(href="#") 關於雨潔
+            a(href="#") 愛心認養
+            a(href="#") 幸福分享
+            a(href="#") 幫助雨潔
+            a(href="#") 聯絡我們
         
-        section(id="content")
+        section(id="title")
+            h1 #[span 林雨潔] 貓咪中途之家
+        div(class="pic")
+        div(id="content")
+            h2 WELCOME!
+                hr
+                p  在這個世界上，每隻貓咪都是平等、都是特別的，你怎麼看待一隻貓咪，那隻貓咪可能就會因你而有所改變，一份尊重和愛心往往會產生意想不到的變化喔！

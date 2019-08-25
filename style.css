@@ -1,20 +1,21 @@
 html, body {
     height: 100vh;
-    background: linear-gradient(to right, #f794a4 50%, #fdd6bd 100%);
+    background: linear-gradient(to right, #ffadc0 50%, #fff 0%);
+    /* 粉色#ffadc0 膚色#fff4f2 */
 }
 * {
+    border: 0.1px solid rgba(89, 74, 42, 0.4);
     font-family: 微軟正黑體;
-    border: 0.1px solid rgba(246, 250, 4, 0.8);
+    text-decoration: none;
+    font-weight: bold;
+    color: #594a2a;
+
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 900;
 }
 .logo {
     width: 100vw;
-    height: 8vh;
-    background-color: rgba(255, 255, 255, 0.3);
+    height: 12vh;
 
     position: fixed;
     top: 0;
@@ -23,44 +24,117 @@ html, body {
     display: block;
     text-align: center;
     font-size: 24px;
-    line-height: 8vh;
+    line-height: 12vh;
     letter-spacing: 0.5em;
 }
-.box1 {
+.boxr {
     height: 100vh;
-    width: 8vh;
-    background-color: rgba(255, 255, 255, 0.3);
+    width: 12vh;
     
     position: fixed;
     top: 0;
 }
+#boxl1 {
+    background-color: #fff4f2;
+    height: 12vh;
+    width: 12vh;
+}
+.boxl {
+    height: 100vh;
+    width: 12vh;
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+#boxl2 {
+    background-color: #ffadc0;
+    height: 12vh;
+    width: 12vh;
+}
 .menu {
-    width: 80vh;
+    width: 30%;
     
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
     
     position: fixed;
-    z-index: 8;
-    top: 50%;
-    transform: translate(-45%, -45%) rotate(90deg);
+    z-index: 10;
+    top: 55%;
+    transform: translate(-41%, -41%) rotate(90deg);
 }
+
 .menu a {
-    width: 100%;
-    height: 5vh;
-}
-.menu h6 {
     display: inline;
     font-size: 18px;
-    /* writing-mode: lr-tb; */
-    margin: 0 5px 0 1px;
-    padding: 2px 4px;
+    /* margin: 0 5px 0 1px; */
+    /* padding: 2px 4px; */
     letter-spacing: 0.1em;
     line-height: 5vh;
 }
-.menu img {
-    width: 20px;
-    vertical-align: text-bottom;
-    transform: rotate(-90deg);
+
+#title {
+    width: 230px;
+    position: fixed;
+    z-index: 12;
+    top: 50%;
+    left: 15.8%;
+}
+#title h1 {
+    font-size: 32px;
+    /* color: #fff; */
+}
+#title h1 span {
+    display: block;
+    font-size: 64px;
+}
+.pic {
+    background-color: #fff4f2;
+    width: 70%;
+    height: 75%;
+    /* box-shadow: 5px 5px 5px rgba(89, 74, 42, 0.4); */
+
+    position: fixed;
+    top: 12vh;
+    right: 12vh;
+}
+#content {
+    background-color: rgba(89, 74, 42, 0.4);
+    width: 650px;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+#content h2 {
+    margin: 40px 100px;
+    color: #ffffff;
+
+    text-align: center;
+    letter-spacing: 0.5em;
+}
+#content hr {
+    margin: 15px 0;
+}
+#content p {
+    font-size: 16px;
+    text-indent: 2em;
+    color: #ffffff;
+    margin: 0 5px;
+
+    text-align: justify;
+    line-height: 1.7em;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (max-width:1023px) {
+    #content {
+        width: 90vw;
+    }
+}
+@media screen and (max-width:767px) {
+    #content {
+        width: 87.9vw;
+    }
 }
