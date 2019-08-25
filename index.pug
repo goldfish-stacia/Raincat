@@ -1,20 +1,24 @@
 //- 導覽列 選項
 mixin nav(link, page, img, alt)
     a(href=link)
-        h6=page
         img(src="imgs/"+img+".svg", alt=alt)
+        h6=page
 
 <!DOCTYPE html>
 html(lang="zh")
     head
         meta(charset="UTF-8")
-        title 林雨潔中途之家
+        title 林雨潔貓咪中途之家
         link(rel="stylesheet", href="style.css")
     body
-        div(id="nav")
-            nav
-                +nav("about.html","關於雨潔","icon1","icon1")
-                +nav("#","愛心認養","icon2","icon2")
-                +nav("#","幸福分享","icon3","icon3")
-                +nav("#","支持雨潔","icon4","icon4")
-                +nav("#","與我聯絡","icon5","icon5")
+        div(class="logo")
+            a 林雨潔貓咪中途之家
+        div(class="box1")
+        div(class="menu")
+            +nav("#","關於雨潔","icon1","icon1")
+            +nav("#","愛心認養","icon2","icon2")
+            +nav("#","幸福分享","icon3","icon3")
+            +nav("#","支持雨潔","icon4","icon4")
+            +nav("#","與我聯絡","icon5","icon5")
+        
+        section(id="content")
