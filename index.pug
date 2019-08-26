@@ -1,3 +1,9 @@
+//- 漢堡選單
+mixin nav(link, page, img, alt)
+    a(href=link)
+        img(src="imgs/"+img+".svg", alt=alt)
+        h6=page
+
 <!DOCTYPE html>
 html(lang="zh")
     head
@@ -5,21 +11,34 @@ html(lang="zh")
         
         title 林雨潔貓咪中途之家
         link(rel="stylesheet", href="style.css")
+
+        //- 導覽列 漢堡選單的
+        input(type="checkbox" id="burger")
+        div(class="burger")
+            +nav("#","關於雨潔","icon1","icon1")
+            +nav("#","愛心認養","icon2","icon2")
+            +nav("#","幸福分享","icon3","icon3")
+            +nav("#","支持雨潔","icon4","icon4")
+            +nav("#","聯絡我們","icon5","icon5")
+            a(href="#" class="x") &#10005
+
     body
-        //- 背景的框框
-        div(class="logo")
-        div(class="boxr")
-            div(id="boxl1")
+        //- 背景的框框們
+        div(class="boxu")
         div(class="boxl")
-            div(id="boxl2")
-        //- 右側導覽列
+            div(class="box1")
+                label(for="burger") &#9776
+        div(class="boxr")
+            div(class="box2")
+        //- 導覽列 顯示的
         div(class="menu")
             a(href="#") 關於雨潔
             a(href="#") 愛心認養
             a(href="#") 幸福分享
-            a(href="#") 幫助雨潔
+            a(href="#") 支持雨潔
             a(href="#") 聯絡我們
-        
+
+        //- 內容
         section(id="title")
             h1 #[span 林雨潔] 貓咪中途之家
         div(class="pic")

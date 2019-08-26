@@ -4,7 +4,7 @@ html, body {
     /* 粉色#ffadc0 膚色#fff4f2 */
 }
 * {
-    border: 0.1px solid rgba(89, 74, 42, 0.4);
+    /* border: 0.1px solid rgba(89, 74, 42, 1); */
     font-family: 微軟正黑體;
     text-decoration: none;
     font-weight: bold;
@@ -13,31 +13,13 @@ html, body {
     margin: 0;
     padding: 0;
 }
-.logo {
+/* 裝飾背景 */
+.boxu {
     width: 100vw;
     height: 12vh;
 
     position: fixed;
     top: 0;
-}
-.logo a {
-    display: block;
-    text-align: center;
-    font-size: 24px;
-    line-height: 12vh;
-    letter-spacing: 0.5em;
-}
-.boxr {
-    height: 100vh;
-    width: 12vh;
-    
-    position: fixed;
-    top: 0;
-}
-#boxl1 {
-    background-color: #fff4f2;
-    height: 12vh;
-    width: 12vh;
 }
 .boxl {
     height: 100vh;
@@ -45,15 +27,28 @@ html, body {
     
     position: fixed;
     top: 0;
+}
+.box1 {
+    background-color: #fff4f2;
+    height: 12vh;
+    width: 12vh;
+}
+.boxr {
+    height: 100vh;
+    width: 12vh;
+    
+    position: fixed;
+    top: 0;
     right: 0;
 }
-#boxl2 {
+.box2 {
     background-color: #ffadc0;
     height: 12vh;
     width: 12vh;
 }
+/* 選單 顯示 */
 .menu {
-    width: 30%;
+    width: 70vh;
     
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -62,18 +57,57 @@ html, body {
     position: fixed;
     z-index: 10;
     top: 55%;
-    transform: translate(-41%, -41%) rotate(90deg);
+    transform: translate(-42%, -42%) rotate(90deg);
 }
 
 .menu a {
     display: inline;
     font-size: 18px;
-    /* margin: 0 5px 0 1px; */
-    /* padding: 2px 4px; */
     letter-spacing: 0.1em;
     line-height: 5vh;
 }
+/* 選單 漢堡選單 */
+.box1 label {
+    display: none;
+    width: 8vh;
+    height: 8vh;
 
+    text-align: center;
+    line-height: 8vh;
+    font-size: 30px;
+}
+.burger {
+    display: none;
+    background-color: rgba(89, 74, 42, 0.9);
+    width: 100vw;
+    height: 100vh;
+    padding: 5vh 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 14;
+}
+.burger a {
+    text-align: center;
+}
+.burger h6 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.burger img {
+    display: block;
+    width: 5vh;
+    margin: 0 auto;
+}
+.burger .x {
+    display: block;
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+}
+/* 內容區域 */
 #title {
     width: 230px;
     position: fixed;
@@ -83,7 +117,6 @@ html, body {
 }
 #title h1 {
     font-size: 32px;
-    /* color: #fff; */
 }
 #title h1 span {
     display: block;
@@ -91,9 +124,8 @@ html, body {
 }
 .pic {
     background-color: #fff4f2;
-    width: 70%;
-    height: 75%;
-    /* box-shadow: 5px 5px 5px rgba(89, 74, 42, 0.4); */
+    width: 70vw;
+    height: 76vh;
 
     position: fixed;
     top: 12vh;
@@ -129,12 +161,78 @@ html, body {
 }
 
 @media screen and (max-width:1023px) {
+    .box1 label {
+        display: inline-block;
+    }
+    .burger {
+        display: none;
+    }
+    #burger:checked + .burger {
+        display: inline-block;
+    }
+    .boxu {
+        height: 8vh;
+    }
+    .boxl {
+        width: 8vh;
+    }
+    .box1 {
+        height: 8vh;
+        width: 8vh;
+    }
+    .boxr {
+        width: 8vh;
+    }
+    .box2 {
+        height: 8vh;
+        width: 8vh;
+    }
+    .menu {
+        display: none;
+    }
+    #title {
+        position: fixed;
+        top: 30%;
+        left: 10.8%;
+    }
+    #title h1 {
+        font-size: 32px;
+    }
+    #title h1 span {
+        font-size: 64px;
+    }
+    .pic {
+        width: 65.4vw;
+        height: 84vh;
+
+        position: fixed;
+        top: 8vh;
+        right: 8vh;
+    }
     #content {
-        width: 90vw;
+        width: 85vw;
+    }
+    #content h2 {
+        margin: 30px 50px;
+    }
+    #content hr {
+        margin: 10px 0;
     }
 }
 @media screen and (max-width:767px) {
     #content {
-        width: 87.9vw;
+        width: 100vw;
+    }
+    #content h2 {
+        margin: 15px 20px;
+        letter-spacing: 0.2em;
+    }
+    #content hr {
+        margin: 5px 0;
+    }
+    #content p {
+        margin: 0 3px;
+    
+        line-height: 1.3em;
     }
 }
