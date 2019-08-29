@@ -1,0 +1,14 @@
+//- 漢堡選單
+mixin nav(link, page, img, alt)
+    a(href=link)
+        img(src="imgs/"+img+".svg", alt=alt)
+        h6=page
+
+input(type="checkbox" id="burger")
+        div(class="burger")
+            +nav("about.html","關於雨潔","icon1","icon1")
+            +nav("#","愛心認養","icon2","icon2")
+            +nav("#","幸福分享","icon3","icon3")
+            +nav("#","支持雨潔","icon4","icon4")
+            +nav("#","聯絡我們","icon5","icon5")
+            a(href="#" class="x") &#10005

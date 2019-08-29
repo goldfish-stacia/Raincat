@@ -1,0 +1,255 @@
+$color-p:  #ffadc0;
+$color-w: #fff;
+$color-lo: #fff4f2;
+$font-color: #594a2a;
+
+$height-width-big: 12vh;
+$height-width-small: 8vh;
+
+
+html, body {
+    background: linear-gradient(to right, $color-p 50%, $color-w 0%);
+    /* 粉色#ffadc0 膚色#fff4f2 */
+}
+* {
+    border: 0.1px solid rgba(89, 74, 42, 1);
+    font-family: 微軟正黑體;
+    text-decoration: none;
+    font-weight: bold;
+    color: $font-color;
+
+    margin: 0;
+    padding: 0;
+}
+/* 裝飾背景 */
+.boxu {
+    width: 100vw;
+    height: $height-width-big;
+
+    position: fixed;
+    top: 0;
+}
+.boxl {
+    height: 100vh;
+    width: $height-width-big;
+    
+    position: fixed;
+    top: 0;
+}
+.box1 {
+    background-color: $color-lo;
+    height: $height-width-big;
+    width: $height-width-big;
+}
+.boxr {
+    height: 100vh;
+    width: $height-width-big;
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.box2 {
+    background-color: $color-p;
+    height: 12vh;
+    width: 12vh;
+}
+/* 選單 顯示 */
+.menu {
+    width: 70vh;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    
+    position: fixed;
+    z-index: 10;
+    top: 55%;
+    transform: translate(-42%, -42%) rotate(90deg);
+
+    a {
+        display: inline;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        line-height: 5vh;
+    }
+}
+
+/* 選單 漢堡選單 */
+.box1 label {
+    display: none;
+    width: 8vh;
+    height: 8vh;
+
+    text-align: center;
+    line-height: 8vh;
+    font-size: 30px;
+}
+.burger {
+    display: none;
+    background-color: rgba(89, 74, 42, 0.9);
+    width: 100vw;
+    height: 100vh;
+    padding: 5vh 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 14;
+
+    a {
+        text-align: center;
+    }
+    h6 {
+        font-size: 24px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+    img {
+        display: block;
+        width: 5vh;
+        margin: 0 auto;
+    }
+    .x {
+        display: block;
+        color: #ffffff;
+        font-size: 50px;
+        text-align: center;
+    }
+}
+/* 內容區域 */
+#title {
+    width: 230px;
+    position: fixed;
+    z-index: 12;
+    top: 50%;
+    left: 15.8%;
+
+    h1 {
+        font-size: 32px;
+
+        span {
+            display: block;
+            font-size: 64px;
+        }
+    }
+}
+
+.pic {
+    background-color: $color-lo;
+    width: 65vw;
+    height: 76vh;
+
+    position: fixed;
+    top: 12vh;
+    right: 12vh;
+}
+#content {
+    background-color: rgba(89, 74, 42, 0.4);
+    width: 650px;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    h2 {
+        margin: 40px 100px;
+        color: #ffffff;
+    
+        text-align: center;
+        letter-spacing: 0.5em;
+    }
+    hr {
+        margin: 15px 0;
+    }
+    p {
+        font-size: 16px;
+        text-indent: 2em;
+        color: #ffffff;
+        margin: 0 5px;
+    
+        text-align: justify;
+        line-height: 1.7em;
+        letter-spacing: 0.1em;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .box1 label {
+        display: inline-block;
+    }
+    .burger {
+        display: none;
+    }
+    #burger:checked + .burger {
+        display: inline-block;
+    }
+    .boxu {
+        height: $height-width-small;
+    }
+    .boxl {
+        width: $height-width-small;
+    }
+    .box1 {
+        height: $height-width-small;
+        width: $height-width-small;
+    }
+    .boxr {
+        width: $height-width-small;
+    }
+    .box2 {
+        height: $height-width-small;
+        width: $height-width-small;
+    }
+    .menu {
+        display: none;
+    }
+    #title {
+        position: fixed;
+        top: 30%;
+        left: 10.8%;
+        
+        h1 {
+            font-size: 32px;
+
+            span {
+                font-size: 64px;
+            }
+        }
+    }
+    .pic {
+        width: 65.4vw;
+        height: 84vh;
+
+        position: fixed;
+        top: 8vh;
+        right: 8vh;
+    }
+    #content {
+        width: 85vw;
+        
+        h2 {
+            margin: 30px 50px;
+        }
+        hr {
+            margin: 10px 0;
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    #content {
+        width: 100vw;
+        
+        h2 {
+            margin: 15px 20px;
+            letter-spacing: 0.2em;
+        }
+        hr {
+            margin: 5px 0;
+        }
+        p {
+           margin: 0 3px;
+           line-height: 1.3em;
+       }
+    }
+}
