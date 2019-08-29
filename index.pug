@@ -15,7 +15,7 @@ html(lang="zh")
         //- 導覽列 漢堡選單的
         input(type="checkbox" id="burger")
         div(class="burger")
-            +nav("#","關於雨潔","icon1","icon1")
+            +nav("about.html","關於雨潔","icon1","icon1")
             +nav("#","愛心認養","icon2","icon2")
             +nav("#","幸福分享","icon3","icon3")
             +nav("#","支持雨潔","icon4","icon4")
@@ -24,11 +24,12 @@ html(lang="zh")
 
     body
         //- 背景的框框們 + 導覽列 顯示的
-        include nav+bg.html
+        include bg.html
         //- 內容
         section(id="title")
             h1 #[span 林雨潔] 貓咪中途之家
         div(class="pic")
+            div(id="cat-banner")
         div(id="content")
             h2 WELCOME!
                 hr
