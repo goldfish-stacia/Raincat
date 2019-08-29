@@ -89,6 +89,7 @@ html, body {
     }
     a:hover {
         background-color: $color-lo;
+        transition-delay: 0.1s;
     }
 
 }

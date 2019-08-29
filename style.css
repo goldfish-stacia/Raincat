@@ -84,6 +84,8 @@ html, body {
 
 .menu a:hover {
   background-color: #fff4f2;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 /* 選單 漢堡選單 */
