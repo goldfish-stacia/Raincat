@@ -13,7 +13,7 @@ html, body {
     /* 粉色#ffadc0 膚色#fff4f2 */
 }
 * {
-    border: 0.1px solid rgba(89, 74, 42, 1);
+    // border: 0.1px solid rgba(89, 74, 42, 1);
     font-family: 微軟正黑體;
     text-decoration: none;
     font-weight: bold;
@@ -201,6 +201,15 @@ html, body {
     }
 }
 
+// 關於頁面
+.pgname {
+    color: $color-w;
+    font-size: 36px;
+    position: fixed;
+    top: 4vh;
+    left: 25%;
+}
+
 @media screen and (max-width:1023px) {
     .box1 label {
         display: inline-block;
@@ -270,7 +279,13 @@ html, body {
             margin: 10px 0;
         }
     }
+    .pgname {
+        font-size: 24px;
+        position: fixed;
+        top: 2.5vh;
+    }
 }
+
 @media screen and (max-width:767px) {
     #content {
         width: 100vw;
