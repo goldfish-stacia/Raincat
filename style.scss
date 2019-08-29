@@ -8,11 +8,12 @@ $height-width-small: 8vh;
 
 
 html, body {
+    height: 100vh;
     background: linear-gradient(to right, $color-p 50%, $color-w 0%);
     /* 粉色#ffadc0 膚色#fff4f2 */
 }
 * {
-    // border: 0.1px solid rgba(89, 74, 42, 1);
+    border: 0.1px solid rgba(89, 74, 42, 1);
     font-family: 微軟正黑體;
     text-decoration: none;
     font-weight: bold;
@@ -48,11 +49,23 @@ html, body {
     position: fixed;
     top: 0;
     right: 0;
+    .box2 {
+        background-color: $color-p;
+        height: 12vh;
+        width: 12vh;
+    }
 }
-.box2 {
-    background-color: $color-p;
-    height: 12vh;
+
+.home {
+    background-image: url(imgs/home.png);
+    background-repeat: no-repeat;
+    background-position: center;
     width: 12vh;
+    height: 12vh;
+
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 /* 選單 顯示 */
 .menu {
@@ -72,6 +85,11 @@ html, body {
         font-size: 18px;
         letter-spacing: 0.1em;
         line-height: 5vh;
+        text-align: center;
+    }
+
+    a:hover {
+        background-color: $color-lo);
     }
 }
 
@@ -209,6 +227,10 @@ html, body {
     .box2 {
         height: $height-width-small;
         width: $height-width-small;
+    }
+    .home {
+        width: $height-width-small;
+        height: $height-width-small;
     }
     .menu {
         display: none;
