@@ -53,20 +53,20 @@ html, body {
         background-color: $color-p;
         height: 12vh;
         width: 12vh;
+        .home {
+            background-image: url(imgs/home.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 12vh;
+            height: 12vh;
+        
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
     }
 }
 
-.home {
-    background-image: url(imgs/home.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 12vh;
-    height: 12vh;
-
-    position: fixed;
-    top: 0;
-    right: 0;
-}
 /* 選單 顯示 */
 .menu {
     width: 70vh;
@@ -87,10 +87,10 @@ html, body {
         line-height: 5vh;
         text-align: center;
     }
-
     a:hover {
-        background-color: $color-lo);
+        background-color: $color-lo;
     }
+
 }
 
 /* 選單 漢堡選單 */
@@ -223,14 +223,14 @@ html, body {
     }
     .boxr {
         width: $height-width-small;
-    }
-    .box2 {
-        height: $height-width-small;
-        width: $height-width-small;
-    }
-    .home {
-        width: $height-width-small;
-        height: $height-width-small;
+        .box2 {
+            height: $height-width-small;
+            width: $height-width-small;
+            .home {
+                width: $height-width-small;
+                height: $height-width-small;
+            }
+        }
     }
     .menu {
         display: none;
