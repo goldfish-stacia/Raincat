@@ -4,6 +4,12 @@ mixin nav(link, page, img, alt)
         img(src="imgs/"+img+".svg", alt=alt)
         h6=page
 
+mixin course(img, title, text)
+    div
+        img(src="imgs/"+img+".jpg", alt="示意圖")
+        span=title
+        p=text
+
 <!DOCTYPE html>
 html(lang="zh")
     head
@@ -26,3 +32,6 @@ html(lang="zh")
         include bg.html
         
         span(class="pgname") 關於雨潔
+
+        section(id="course")
+            +course("", "體驗一次不當林雨潔", "")
