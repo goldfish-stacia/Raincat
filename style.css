@@ -68,7 +68,6 @@ html, body {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   position: fixed;
-  z-index: 10;
   top: 55%;
   -webkit-transform: translate(-42%, -42%) rotate(90deg);
           transform: translate(-42%, -42%) rotate(90deg);
@@ -107,7 +106,6 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 14;
 }
 
 .burger a {
@@ -137,7 +135,6 @@ html, body {
 #title {
   width: 230px;
   position: fixed;
-  z-index: 12;
   top: 50%;
   left: 15.8%;
 }
@@ -200,9 +197,35 @@ html, body {
 .pgname {
   color: #fff;
   font-size: 36px;
-  position: fixed;
-  top: 4vh;
-  left: 25%;
+  margin: 0 0 0 25%;
+}
+
+#course {
+  margin: 8vh auto 0;
+  width: 80vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+#course img {
+  width: 100%;
+  display: inline-block;
+}
+
+#course .text {
+  padding: 10px 10px;
+}
+
+#course .text span {
+  font-size: 24px;
+}
+
+#course .text p {
+  display: inline-block;
+  text-indent: 2em;
 }
 
 @media screen and (max-width: 1023px) {

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="zh")
+    head
+        meta(charset="UTF-8")(name="viewport")(content="width=device-width, initial-scale=1.0, user-scalable=no")
+        
+        title 林雨潔貓咪中途之家 | 聯絡我們
+        link(rel="stylesheet", href="style.css")
+
+        //- 導覽列 漢堡選單的
+        input(type="checkbox" id="burger")
+        div(class="burger")
+            +nav("about.html","關於雨潔","icon1","icon1")
+            +nav("#","愛心認養","icon2","icon2")
+            +nav("#","幸福分享","icon3","icon3")
+            +nav("#","支持雨潔","icon4","icon4")
+            +nav("#","聯絡我們","icon5","icon5")
+            a(href="#" class="x") &#10005
+    body
+        //- 背景的框框們 + 導覽列 顯示的
+        include bg.html
+        
+        span(class="pgname") 聯絡我們
+
+        section
